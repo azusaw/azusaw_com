@@ -17,7 +17,7 @@ export default function PageLayout({ title, children }) {
           style={{ position: "fixed", top: 0, height: "50px" }}
         >
           <Link href="/">
-            <div className={`${commonStyle.pointer} ${spaceStyle.ma10}`}>
+            <div className={`${commonStyle.link} ${spaceStyle.ma10}`}>
               <Azusaw />
             </div>
           </Link>
