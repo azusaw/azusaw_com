@@ -20,3 +20,32 @@
   box-shadow: 0 0 20px 0 #fff;
   transition: .5s ;
 }
+.box{
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 3rem;
+  color: #fff;
+  border: solid 1px #ff5eeb;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.2);
+}
+.box:before, .box:after{
+  position: absolute;
+  content:'';
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.box:before{
+  top: 0;
+  left: 3px;
+  border: solid 1px #fff471;
+  transform: rotate(0.2deg);
+}
+.box:after{
+  top: 3px;
+  left:0;
+  border: solid 1px #9afffd;
+  transform: rotate(0.2deg);
+}
