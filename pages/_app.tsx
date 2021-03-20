@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../styles/antd.less"
-import commonStyle from "../styles/common.module.css"
+import style from "./app.module.css"
 
 function App({ Component, pageProps }) {
   const [mouseX, setMouseX] = useState(0)
@@ -20,11 +20,11 @@ function App({ Component, pageProps }) {
   return (
     <>
       <div
-        className={commonStyle.pointer}
+        className={style.pointer}
         style={{ transform: `translate(${mouseX}px, ${mouseY}px)` }}
       />
       <div
-        className={`${commonStyle.pointer} ${commonStyle.smallPointer}`}
+        className={`${style.pointer} ${style.smallPointer}`}
         style={{ transform: `translate(${mouseX}px, ${mouseY}px)` }}
       />
       <Component {...pageProps} />

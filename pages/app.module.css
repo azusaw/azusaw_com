@@ -1,0 +1,23 @@
+.pointer {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    opacity: 0.3;
+    box-shadow: 0 0 20px 0 #fff;
+    top: -20px;
+    left: -20px;
+    border-radius: 50%;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.001s transform;
+    pointer-events: none;
+    z-index: 999;
+}
+.smallPointer {
+    width: 10px;
+    height: 10px;
+    top: -7.5px;
+    left: -7.5px;
+    background: #fff;
+    opacity: 0.8;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) transform;
+}
