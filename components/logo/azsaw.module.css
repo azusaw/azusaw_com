@@ -26,8 +26,11 @@
         opacity:0.8;
     }
 }
+.logo1:hover, .logo2:hover, .logo3:hover, .logo4:hover, .logo5:hover, .logo6:hover {
+    animation: animate-svg-stroke .2s ease 0s forwards
+}
 .logo1 {
-    animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
+    animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s forwards,
     animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both
 }
 .logo2 {
