@@ -1,0 +1,73 @@
+:root {
+  --minimum-width: 7rem;
+  --xsmall-width: 12rem;
+  --small-width: 20rem;
+  --middle-width: 25rem;
+  --large-width: 30rem;
+  --xlarge-width: 35rem;
+  --user-header-height: 65px;
+  --staff-header-height: 50px !important;
+}
+.minimum {
+  width: var(--minimum-width);
+  max-width: var(--minimum-width);
+}
+.xSmall {
+  width: var(--xsmall-width);
+  max-width: var(--xsmall-width);
+}
+.small {
+  width: var(--small-width);
+  max-width: var(--small-width);
+}
+.middle {
+  width: var(--middle-width);
+  max-width: var(--middle-width);
+}
+.large {
+  width: var(--large-width);
+  max-width: var(--large-width);
+}
+.xLarge {
+   width: var(--xlarge-width);
+   max-width: var(--xlarge-width);
+ }
+.w90 {
+  width: 90%;
+}
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.fontXSmall {
+  font-size: 0.7rem;
+}
+.fontSmall {
+  font-size: 0.8rem;
+}
+.fontMiddle {
+  font-size: 1.1rem;
+}
+.fontLarge {
+  font-size: 1.2rem;
+}
+.fontXLarge {
+  font-size: 1.5rem;
+}
+.lineLarge {
+  line-height: 1.8rem
+}
+.lineXLarge {
+  line-height: 3rem
+}
+.mobile {
+  max-width: 40rem;
+}
+.shrink80 {
+  transform: scale(0.8);
+  transform-origin: top left;
+  /* scaleで縮めた分の横幅を増やす */
+  width: 125%;
+}
