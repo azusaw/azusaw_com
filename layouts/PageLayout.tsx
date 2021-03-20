@@ -8,7 +8,6 @@ import spaceStyle from "../styles/space.module.css"
 import Azusaw from "../components/logo/Azusaw"
 import {
   GithubFilled,
-  GithubOutlined,
   InstagramFilled,
   LinkedinFilled,
   MailFilled,
@@ -16,7 +15,7 @@ import {
 
 export default function PageLayout({ title, children }) {
   return (
-    <div style={{ backgroundColor: "#222228", minHeight: "200vh" }}>
+    <div style={{ backgroundColor: "#222228", minHeight: "100vh" }}>
       <Head>
         <title>{title}</title>
       </Head>
@@ -24,26 +23,26 @@ export default function PageLayout({ title, children }) {
         <div
           className={spaceStyle.pa05}
           style={{
-            position: "fixed",
+            position: "sticky",
             top: "20px",
-            height: "70px",
             width: "100vw",
             maxWidth: "60rem",
           }}
         >
-          <span className={`${commonStyle.link} ${spaceStyle.ma10}`}>
-            <Link href="/">
-              <Azusaw />
-            </Link>
+          <span className={`${commonStyle.pointer} ${spaceStyle.ma10}`}>
+            <Azusaw />
           </span>
-          <span className={spaceStyle.floatRight}>
+          <span
+            className={spaceStyle.floatRight}
+            style={{ position: "relative" }}
+          >
             <GithubFilled className={commonStyle.iconButton} />
             <LinkedinFilled className={commonStyle.iconButton} />
             <InstagramFilled className={commonStyle.iconButton} />
             <MailFilled className={commonStyle.iconButton} />
           </span>
         </div>
-        <div style={{ position: "relative", paddingTop: "100px" }}>
+        <div style={{ paddingTop: "10px" }}>
           <div className={`${commonStyle.relative} ${spaceStyle.pa20}`}>
             {children}
           </div>

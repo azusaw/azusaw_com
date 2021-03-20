@@ -1,11 +1,22 @@
 .bold {
   font-weight: bold;
 }
-.link:hover {
+.pointer:hover {
   cursor: pointer;
 }
 .iconButton {
+  position: relative;
   color: white;
+  border-radius: 10px;
   font-size: 2.0rem;
+  padding: 10px;
   margin-left: 1.5rem;
+  transition: .5s ;
+}
+.iconButton:hover {
+  cursor: pointer;
+  color: #666666;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #fff;
+  transition: .5s ;
 }
