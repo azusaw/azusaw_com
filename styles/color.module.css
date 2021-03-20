@@ -1,0 +1,140 @@
+:root {
+  --primary: #FF7C7F;
+  --primary-hover: #FFB0B2;
+  --primary-light: #FFF6F6;
+  --primary-light-hover: #FFD7D8;
+  --primary-dark: #9f8181;
+  --secondary: #8BBCE9;
+  --secondary-hover: #AED0F0;
+  --secondary-light: #E8F2FB;
+  --secondary-dark: #768091;
+  --line: #07B53A;
+  --line-hover: #51CB75;
+  --white: #FFF;
+  --text: #666;
+}
+.primary {
+  color: var(--primary);
+}
+.primaryBk {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.primaryBtn, .primaryBtn:focus, .primaryBtn:visited, .primaryLightBtn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+.primaryLightBtn, .primaryLightBtn:focus, .primaryLightBtn:visited {
+  background-color: var(--primary-light-hover);
+  border-color: var(--primary-light-hover);
+  color: var(--text);
+}
+.primaryBtn:hover, .primaryLightBtn:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary);
+}
+.primaryLightBk {
+  background-color: var(--primary-light);
+}
+.primaryLightBox {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-light);
+  border: solid 1px var(--primary-light-hover);
+  border-radius: 3px;
+}
+.primaryLightHover:hover {
+  background-color: var(--primary-light-hover);
+  border-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+}
+.primaryDarkBk {
+  background-color: var(--primary-dark);
+}
+.secondary {
+  color: var(--secondary);
+}
+.secondaryBk {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+.secondaryBtn, .secondaryBtn:focus, .secondaryBtn:visited {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+}
+.secondaryLightBtn, .secondaryLightBtn:focus, .secondaryLightBtn:visited {
+  background-color: var(--secondary-light);
+  border-color: var(--secondary-light);
+  color: var(--text);
+}
+.secondaryBtn:hover, .secondaryLightBtn:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary);
+  color: var(--white);
+  cursor: pointer;
+}
+.secondaryTriangle {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-top: 1.5rem solid var(--secondary);
+}
+.secondaryLightBk {
+  background-color: var(--secondary-light);
+}
+.secondaryLightHover:hover {
+  background-color: var(--secondary-light);
+  border-color: var(--secondary);
+  cursor: pointer;
+}
+.secondaryDarkBk {
+  background-color: var(--secondary-dark);
+}
+.white {
+  color: var(--white);
+}
+.whiteBk {
+  background-color: var(--white);
+}
+.line {
+  color: var(--line);
+}
+.lineBk {
+  background-color: var(--line);
+}
+.lineBtn, .lineBtn:focus, .lineBtn:visited{
+  background-color: var(--line);
+  border-color: var(--line);
+}
+.lineBtn:hover {
+  background-color: var(--line-hover);
+  border-color: var(--line);
+}
+.success {
+  color: #20c41a;
+}
+.warning {
+  color: #faad14;
+}
+.error {
+  color: #ef203f;
+}
+.text {
+  color: var(--text);
+}
+.icon {
+  color: #999;
+}
+.iconMemo {
+  color: orangered;
+}
+.iconMinor{
+  color: green;
+}
+.iconGift{
+  color: mediumblue
+}

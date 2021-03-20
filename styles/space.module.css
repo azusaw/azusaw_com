@@ -110,6 +110,12 @@
 .pa10 {
   padding: 1rem;
 }
+.pa15 {
+  padding: 1.5rem;
+}
+.pa20 {
+  padding: 2.0rem;
+}
 .px05 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
