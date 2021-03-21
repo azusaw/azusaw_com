@@ -53,7 +53,7 @@
     animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.0s both,
     animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both
 }
-.com {
+.domain {
     opacity:0;
     font-size: 20px;
     color: #fff;

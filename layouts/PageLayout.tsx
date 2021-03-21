@@ -27,6 +27,7 @@ export default function PageLayout({ title, children }) {
             top: "20px",
             width: "100vw",
             maxWidth: "60rem",
+            zIndex: 15,
           }}
         >
           <span className={`${commonStyle.pointer} ${spaceStyle.ma10}`}>

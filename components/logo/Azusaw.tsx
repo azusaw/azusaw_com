@@ -143,7 +143,7 @@ const Azusaw: React.FC = () => {
           </g>
         </svg>
       </Link>
-      <span className={style.com}>{".com"}</span>
+      <span className={style.domain}>{".work"}</span>
     </>
   )
 }
