@@ -1,3 +1,9 @@
+.head {
+  color: #bcbcbc;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  line-height: 100%;
+}
 .bold {
   font-weight: bold;
 }
@@ -52,7 +58,7 @@ elevation:hover {
 }
 .underLineToRight:hover > .mailIcon, .backGroundFade:hover > .goodIcon {
   opacity: 1;
-  fontSize: 20px;
+  font-size: 20px;
   transition: 0.5s;
 }
 .iconButton {
@@ -66,7 +72,7 @@ elevation:hover {
 }
 .iconButton:hover {
   cursor: pointer;
-  color: #666666;
+  color: #666;
   background-color: #fff;
   box-shadow: 0 0 20px 0 #fff;
   transition: .5s ;
@@ -74,19 +80,21 @@ elevation:hover {
 .box{
   position: relative;
   margin: 2rem 0;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   color: #fff;
   border: solid 1px #ff5eeb;
   border-radius: 10px;
   background-color: rgba(255,255,255, 0.2);
 }
 .box:before, .box:after{
-  position: absolute;
   content:'';
+  position: absolute;
+  pointer-events: none;
   width: calc(100% - 3px);
   height: calc(100% - 3px);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
 .box:before{
   top: 0;
