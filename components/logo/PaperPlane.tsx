@@ -1,6 +1,4 @@
 import React from "react"
-import Link from "next/link"
-import style from "./azsaw.module.css"
 
 const PaperPlane: React.FC = () => {
   return (

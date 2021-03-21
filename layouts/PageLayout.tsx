@@ -5,7 +5,7 @@ import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
 import spaceStyle from "../styles/space.module.css"
-import Azusaw from "../components/logo/Azusaw"
+import SiteLogo from "../components/logo/SiteLogo"
 import {
   GithubFilled,
   InstagramFilled,
@@ -31,7 +31,7 @@ export default function PageLayout({ title, children }) {
           }}
         >
           <span className={`${commonStyle.pointer} ${spaceStyle.ma10}`}>
-            <Azusaw />
+            <SiteLogo />
           </span>
           <span
             className={spaceStyle.floatRight}

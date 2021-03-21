@@ -1,8 +1,8 @@
 import React from "react"
 import Link from "next/link"
-import style from "./azsaw.module.css"
+import style from "./site-logo.module.css"
 
-const Azusaw: React.FC = () => {
+const SiteLogo: React.FC = () => {
   return (
     <>
       <Link href="/a">
@@ -147,4 +147,4 @@ const Azusaw: React.FC = () => {
     </>
   )
 }
-export default Azusaw
+export default SiteLogo
