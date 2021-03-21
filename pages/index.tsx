@@ -1,12 +1,13 @@
 import React from "react"
+import { motion } from "framer-motion"
 import PageLayout from "../layouts/PageLayout"
 import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
 import spaceStyle from "../styles/space.module.css"
 import { Button, Form, Input } from "antd"
-import { SendOutlined } from "@ant-design/icons"
 import PaperPlane from "../components/logo/PaperPlane"
+import { LikeFilled, MailFilled } from "@ant-design/icons"
 
 const layout = {
   labelCol: { span: 5 },
@@ -23,19 +24,30 @@ export default function Home() {
         {"I'm a software engineer in Tokyo."}
         <br />
         {"I'm in the journey to improve my development skills and myself."}
-        <br />
-        <br />
-        {"Want to know about me more? -> "}
-        <span className={commonStyle.bold}> {"Explore this site."}</span>
-        <br />
-        {"Want to work together?  -> "}
-        <span className={commonStyle.bold}> {"Send me a message."}</span>
+        <div className={`${sizeStyle.lineXLarge} ${spaceStyle.my10}`}>
+          {"Want to know about me more? -> "}
+          <span className={commonStyle.bold}>
+            <span className={commonStyle.backGroundFade}>
+              {"Explore this site."}
+              <LikeFilled
+                className={`${spaceStyle.pl05} ${commonStyle.goodIcon}`}
+              />
+            </span>
+          </span>
+          <br />
+          {"Want to work together?  -> "}
+          <span className={commonStyle.bold}>
+            <span className={commonStyle.underLineToRight}>
+              {"Send me a message."}
+              <MailFilled
+                className={`${spaceStyle.pl05} ${commonStyle.mailIcon}`}
+              />
+            </span>
+          </span>
+        </div>
       </div>
       <div className={commonStyle.box}>
-        <div className={colorStyle.bold}>
-          <SendOutlined className={sizeStyle.fontXLarge} />
-          <PaperPlane />
-        </div>
+        <PaperPlane />
         <Form {...layout} colon={false}>
           <Form.Item
             name="email"
@@ -61,8 +73,13 @@ export default function Home() {
             <Input.TextArea rows={5} />
           </Form.Item>
           <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit" block>
-              Submit
+            <Button
+              type="primary"
+              htmlType="submit"
+              block
+              className={commonStyle.elevation}
+            >
+              {"Submit"}
             </Button>
           </Form.Item>
         </Form>
