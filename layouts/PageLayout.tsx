@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import colorStyle from "../styles/color.module.css"
@@ -11,9 +11,17 @@ import {
   InstagramFilled,
   LinkedinFilled,
   MailFilled,
+  MenuOutlined,
 } from "@ant-design/icons"
 
 export default function PageLayout({ title, children }) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    /* breakpoint in antd grid */
+    setIsMobile(window.innerWidth <= 768)
+  }, [typeof window !== "undefined" && window?.innerWidth])
+
   return (
     <div style={{ backgroundColor: "#222228", minHeight: "100vh" }}>
       <Head>
@@ -33,17 +41,19 @@ export default function PageLayout({ title, children }) {
           <span className={`${commonStyle.pointer} ${spaceStyle.ma10}`}>
             <SiteLogo />
           </span>
-          <span
-            className={spaceStyle.floatRight}
-            style={{ position: "relative" }}
-          >
-            <GithubFilled className={commonStyle.iconButton} />
-            <LinkedinFilled className={commonStyle.iconButton} />
-            <InstagramFilled className={commonStyle.iconButton} />
-            <MailFilled className={commonStyle.iconButton} />
-          </span>
+          {!isMobile && (
+            <span
+              className={spaceStyle.floatRight}
+              style={{ position: "relative" }}
+            >
+              <GithubFilled className={commonStyle.iconButton} />
+              <LinkedinFilled className={commonStyle.iconButton} />
+              <InstagramFilled className={commonStyle.iconButton} />
+              <MailFilled className={commonStyle.iconButton} />
+            </span>
+          )}
         </div>
-        <div style={{ paddingTop: "10px" }}>
+        <div style={{ paddingTop: "30px" }}>
           <div className={`${commonStyle.relative} ${spaceStyle.pa20}`}>
             {children}
           </div>
