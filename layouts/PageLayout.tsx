@@ -11,7 +11,6 @@ import {
   InstagramFilled,
   LinkedinFilled,
   MailFilled,
-  MenuOutlined,
 } from "@ant-design/icons"
 
 export default function PageLayout({ title, children }) {
@@ -53,7 +52,7 @@ export default function PageLayout({ title, children }) {
             </span>
           )}
         </div>
-        <div style={{ paddingTop: "30px" }}>
+        <div style={{ paddingTop: "20px" }}>
           <div className={`${commonStyle.relative} ${spaceStyle.pa20}`}>
             {children}
           </div>

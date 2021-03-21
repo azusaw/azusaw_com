@@ -72,9 +72,9 @@ const IndexPage: React.FC = () => {
         <motion.span animate={controls} style={{ position: "absolute" }}>
           <Image
             preview={false}
-            width={45}
+            width={32}
             src="/images/paper-plane1.svg"
-            className={spaceStyle.ml10}
+            className={`${spaceStyle.ml10} ${spaceStyle.py05}`}
             onClick={mailSendAnimationStart}
           />
         </motion.span>
@@ -104,17 +104,15 @@ const IndexPage: React.FC = () => {
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button
-              type="primary"
               htmlType="submit"
               block
-              className={commonStyle.elevation}
+              className={commonStyle.submitButton}
             >
               {"Submit"}
             </Button>
           </Form.Item>
         </Form>
       </div>
-      <div style={{ height: "100vh", color: "#fff" }}>{"dummy"}</div>
     </PageLayout>
   )
 }
