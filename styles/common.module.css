@@ -10,13 +10,16 @@
 .pointer:hover {
   cursor: pointer;
 }
-.submitButton {
+.submitButton, .submitButton:focus, .submitButton:visited {
+  margin-top: 1rem;
   font-weight: bold;
   color: #fff;
+  border:1px solid #fff;
   background: transparent;
   transition: all .5s ease-in-out;
 }
 .submitButton:hover {
+  color: #555;
   background: #fcffa2;
   transition: all .5s ease-in-out;
 }
