@@ -124,6 +124,10 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px20 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 .py05 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;

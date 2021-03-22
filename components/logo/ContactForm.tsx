@@ -82,7 +82,13 @@ const ContactForm: React.FC = () => {
           onClick={mailSendAnimationStart}
         />
       </motion.span>
-      <Form {...layout} form={form} colon={false} onFinish={sendGoogleForm}>
+      <Form
+        {...layout}
+        form={form}
+        colon={false}
+        onFinish={sendGoogleForm}
+        className={spaceStyle.mt10}
+      >
         <Form.Item
           name="email"
           label={<span className={colorStyle.white}>{"Email"}</span>}

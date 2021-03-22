@@ -29,9 +29,9 @@ export default function PageLayout({ title, children }) {
         <Head>
           <title>{title}</title>
         </Head>
-        <div className={spaceStyle.mxAuto} style={{ maxWidth: "60rem" }}>
+        <div className={spaceStyle.mxAuto} style={{ maxWidth: "55rem" }}>
           <div
-            className={spaceStyle.pa05}
+            className={`${commonStyle.header} ${spaceStyle.pa05}`}
             style={{
               position: "sticky",
               top: "20px",
@@ -44,10 +44,7 @@ export default function PageLayout({ title, children }) {
               <SiteLogo />
             </span>
             {!isMobile && (
-              <span
-                className={spaceStyle.floatRight}
-                style={{ position: "relative" }}
-              >
+              <span className={spaceStyle.floatRight}>
                 <GithubFilled className={commonStyle.iconButton} />
                 <LinkedinFilled className={commonStyle.iconButton} />
                 <InstagramFilled className={commonStyle.iconButton} />
@@ -56,9 +53,20 @@ export default function PageLayout({ title, children }) {
             )}
           </div>
           <div style={{ paddingTop: "20px" }}>
-            <div className={`${commonStyle.relative} ${spaceStyle.pa20}`}>
+            <div className={`${commonStyle.relative} ${spaceStyle.px20}`}>
               {children}
             </div>
+          </div>
+          <div
+            className={`${colorStyle.white} ${sizeStyle.fontSmall} ${spaceStyle.py10} ${spaceStyle.alignRight}`}
+          >
+            {`Copyright ${new Date().getFullYear()} `}
+            <Link href="/">
+              <span className={`${commonStyle.bold} ${commonStyle.pointer}`}>
+                {"azusaw.work"}
+              </span>
+            </Link>
+            {` All rights reserved.`}
           </div>
         </div>
       </div>

@@ -83,16 +83,19 @@
   box-shadow: 0 0 20px 0 #fff;
   transition: .5s ;
 }
-.box{
-  position: relative;
+.container, .box {
   margin: 2rem 0;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
+}
+.box {
+  position: relative;
+  padding: 1.5rem;
   color: #fff;
   border: solid 1px #ff5eeb;
   border-radius: 10px;
   background-color: rgba(255,255,255, 0.2);
 }
-.box:before, .box:after{
+.box:before, .box:after {
   content:'';
   position: absolute;
   pointer-events: none;
@@ -102,13 +105,13 @@
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 1;
 }
-.box:before{
+.box:before {
   top: 0;
   left: 3px;
   border: solid 1px #fff471;
   transform: rotate(0.2deg);
 }
-.box:after{
+.box:after {
   top: 3px;
   left:0;
   border: solid 1px #9afffd;
