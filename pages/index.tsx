@@ -1,39 +1,13 @@
 import React from "react"
-import { motion, useAnimation } from "framer-motion"
+import { LikeFilled, MailFilled } from "@ant-design/icons"
+import ContactForm from "../components/logo/Contact"
 import PageLayout from "../layouts/PageLayout"
 import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
 import spaceStyle from "../styles/space.module.css"
-import { Button, Form, Input, Image } from "antd"
-import { LikeFilled, MailFilled } from "@ant-design/icons"
-
-const layout = {
-  labelCol: { span: 5 },
-  wrapperCol: { sm: { span: 24 }, md: { offset: 1, span: 17 } },
-}
-const tailLayout = {
-  wrapperCol: { sm: { span: 24 }, md: { offset: 6, span: 17 } },
-}
 
 const IndexPage: React.FC = () => {
-  const controls = useAnimation()
-  const mailSendAnimationStart = () => {
-    controls.start({
-      x: 250,
-      y: -200,
-      transformOrigin: "center bottom",
-      rotate: 180,
-      opacity: [1, 1, 0],
-      transition: {
-        ease: "linear",
-        duration: 1.8,
-        repeat: 1,
-        repeatType: "reverse",
-        repeatDelay: 5,
-      },
-    })
-  }
   return (
     <PageLayout title={"azusaw.work"}>
       <div className={`${colorStyle.white} ${sizeStyle.lineLarge} `}>
@@ -61,57 +35,7 @@ const IndexPage: React.FC = () => {
             </span>
           </span>
         </div>
-      </div>
-      <div className={commonStyle.box}>
-        <h2
-          className={commonStyle.head}
-          style={{ display: "inline-block", position: "relative", top: 0 }}
-        >
-          {"CONTACT"}
-        </h2>
-        <motion.span animate={controls} style={{ position: "absolute" }}>
-          <Image
-            preview={false}
-            width={32}
-            src="/images/paper-plane1.svg"
-            className={`${spaceStyle.ml10} ${spaceStyle.py05}`}
-            onClick={mailSendAnimationStart}
-          />
-        </motion.span>
-        <Form {...layout} colon={false}>
-          <Form.Item
-            name="email"
-            label={<span className={colorStyle.white}>{"Email"}</span>}
-            rules={[
-              { required: true, message: "Please input your email address." },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="name"
-            label={<span className={colorStyle.white}>{"Name"}</span>}
-            rules={[{ required: true, message: "Please input your name." }]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            name="messages"
-            label={<span className={colorStyle.white}>{"Messages"}</span>}
-            rules={[{ required: true, message: "Please input messages." }]}
-          >
-            <Input.TextArea rows={5} />
-          </Form.Item>
-          <Form.Item {...tailLayout}>
-            <Button
-              htmlType="submit"
-              block
-              className={commonStyle.submitButton}
-            >
-              {"Submit"}
-            </Button>
-          </Form.Item>
-        </Form>
+        <ContactForm />
       </div>
     </PageLayout>
   )
