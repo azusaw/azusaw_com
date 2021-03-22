@@ -1,6 +1,6 @@
 import React from "react"
 import { LikeFilled, MailFilled } from "@ant-design/icons"
-import ContactForm from "../components/logo/Contact"
+import ContactForm from "../components/logo/ContactForm"
 import PageLayout from "../layouts/PageLayout"
 import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"

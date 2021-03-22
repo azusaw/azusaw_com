@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import { motion, useAnimation } from "framer-motion"
 import { Button, Form, Image, Input, message } from "antd"
+import { HeartFilled } from "@ant-design/icons"
 import { useForm } from "antd/lib/form/Form"
+import colorStyle from "../../styles/color.module.css"
 import commonStyle from "../../styles/common.module.css"
 import sizeStyle from "../../styles/size.module.css"
 import spaceStyle from "../../styles/space.module.css"
-import colorStyle from "../../styles/color.module.css"
-import { HeartFilled } from "@ant-design/icons"
 
 const layout = {
   labelCol: { span: 5 },
@@ -18,7 +18,6 @@ const tailLayout = {
 
 const ContactForm: React.FC = () => {
   const [form] = useForm()
-  const [isSending, setIsSending] = useState(false)
   const controls = useAnimation()
 
   const mailSendAnimationStart = () => {
@@ -43,7 +42,7 @@ const ContactForm: React.FC = () => {
     formData.append("entry.1388202581", values.email)
     formData.append("entry.567215944", values.name)
     formData.append("entry.2042146725", values.message)
-    mailSendAnimationStart()
+
     message.success({
       icon: <></>,
       content: (
@@ -109,12 +108,7 @@ const ContactForm: React.FC = () => {
           <Input.TextArea rows={5} />
         </Form.Item>
         <Form.Item {...tailLayout}>
-          <Button
-            htmlType="submit"
-            block
-            className={commonStyle.submitButton}
-            disabled={isSending}
-          >
+          <Button htmlType="submit" block className={commonStyle.submitButton}>
             {"Submit"}
           </Button>
         </Form.Item>
