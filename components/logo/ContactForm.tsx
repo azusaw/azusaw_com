@@ -88,6 +88,10 @@ const ContactForm: React.FC = () => {
           label={<span className={colorStyle.white}>{"Email"}</span>}
           rules={[
             { required: true, message: "Please input your email address." },
+            {
+              type: "email",
+              message: "Please input value as email address format.",
+            },
           ]}
         >
           <Input />
@@ -103,7 +107,7 @@ const ContactForm: React.FC = () => {
         <Form.Item
           name="message"
           label={<span className={colorStyle.white}>{"Messages"}</span>}
-          rules={[{ required: true, message: "Please input messages." }]}
+          rules={[{ required: true, message: "Please input some messages." }]}
         >
           <Input.TextArea rows={5} />
         </Form.Item>
