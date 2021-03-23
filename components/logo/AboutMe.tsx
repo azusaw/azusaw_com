@@ -1,7 +1,6 @@
 import React from "react"
 import { motion, useAnimation } from "framer-motion"
 import { Avatar, Button, Col, Form, Image, Input, message, Row } from "antd"
-import { HeartFilled } from "@ant-design/icons"
 import { useForm } from "antd/lib/form/Form"
 import colorStyle from "../../styles/color.module.css"
 import commonStyle from "../../styles/common.module.css"
@@ -13,19 +12,27 @@ const AboutMe: React.FC = () => {
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"ABOUT ME"}</h2>
       <Row>
-        <Col md={{ span: 14 }} sm={{ span: 24 }}>
-          {"It's azsaw. I have a bigI was born in 1993."}{" "}
+        <Col md={{ span: 18 }} sm={{ span: 24 }}>
+          {"It's azsaw. I was born in 1993. "}
           {
             "Currently I'm working as a front-end engineer but my career was started from back-end engineer. "
           }
+          {
+            "My greatest strength is that I can not only design but also development. "
+          }
         </Col>
         <Col
-          md={{ offset: 1, span: 9 }}
+          md={{ offset: 1, span: 5 }}
           sm={{ span: 24 }}
-          className={`${spaceStyle.alignRight} ${spaceStyle.pa10}`}
+          className={spaceStyle.alignCenter}
         >
           {/*TODO: make portrait*/}
-          <Avatar size={80} src="/images/Tinny.jpg" />
+          <Avatar size={100} src="/images/Tinny.jpg" />
+        </Col>
+        <Col span={24}>
+          <div className={commonStyle.backGroundFade}>
+            {"Want to know me more?"}
+          </div>
         </Col>
       </Row>
     </div>
