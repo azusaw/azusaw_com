@@ -12,7 +12,7 @@ const WhatICanDo: React.FC = () => {
   return (
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"WHAT I CAN DO"}</h2>
-      {"React, Next.js"}
+      {"React.js, Next.js"}
     </div>
   )
 }

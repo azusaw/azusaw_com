@@ -1,5 +1,5 @@
 import React from "react"
-import { LikeFilled, MailFilled } from "@ant-design/icons"
+import { FireFilled, LikeFilled, MailFilled } from "@ant-design/icons"
 import PageLayout from "../layouts/PageLayout"
 import AboutMe from "../components/logo/AboutMe"
 import ContactForm from "../components/logo/ContactForm"
@@ -24,6 +24,16 @@ const IndexPage: React.FC = () => {
                 {"Explore this site."}
                 <LikeFilled
                   className={`${spaceStyle.pl05} ${commonStyle.goodIcon}`}
+                />
+              </span>
+            </span>
+            <br />
+            {"Want to view my works?  -> "}
+            <span className={commonStyle.bold}>
+              <span className={commonStyle.underLineToRight}>
+                {"Come to my gallery."}
+                <FireFilled
+                  className={`${spaceStyle.pl05} ${commonStyle.mailIcon}`}
                 />
               </span>
             </span>
