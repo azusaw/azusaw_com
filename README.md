@@ -2,7 +2,7 @@
 My portfolio site 🙃
 
 # website
-> https://azusaw-contentful-demo.netlify.app/
+> https://azusaw.work
 
 # used
 - Next.js
