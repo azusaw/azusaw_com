@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 574.6571 574.02661"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="html5.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   width="574.6571"
+   height="574.02661"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="1.5859375"
+     inkscape:cx="290.6798"
+     inkscape:cy="250.64039"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title2">HTML5 Logo</title>
+  <path
+     d="m 143.19652,44.885235 h 23 v 22.8 h 21.2 v -22.8 h 23 v 68.999995 h -23 V 90.885235 h -21 v 22.999995 h -23.2 m 97.6,-45.999995 h -20.3 v -23 h 63.7 v 23 h -20.4 v 45.999995 h -23 m 53.5,-68.999995 h 24.1 l 14.8,24.3 14.8,-24.3 h 24.1 v 68.999995 h -23 V 79.685235 l -16.1,24.799995 -16.1,-24.799995 v 34.199995 h -22.6 m 89.2,-68.999995 h 23 v 46.2 h 32.6 v 22.799995 h -55.6"
+     id="path4"
+     style="fill:#1a1a1a;fill-opacity:1" />
+  <path
+     fill="#e44d26"
+     d="m 142.39652,515.88523 -33,-370.4 h 362.8 l -33,370.2 -148.7,41.2"
+     id="path6" />
+  <path
+     fill="#f16529"
+     d="m 290.79652,525.38523 v -349.5 h 148.3 l -28.3,316"
+     id="path8" />
+  <path
+     fill="#ebebeb"
+     d="m 176.79652,221.18523 h 114 v 45.4 h -64.2 l 4.2,46.5 h 60 v 45.3 h -101.6 m 2,22.8 h 45.6 l 3.2,36.3 50.8,13.6 v 47.4 l -93.2,-26"
+     id="path10" />
+  <path
+     fill="#ffffff"
+     d="m 404.39652,221.18523 h -113.8 v 45.4 h 109.6 m -4.1,46.5 h -105.5 v 45.4 h 56 l -5.3,59 -50.7,13.6 v 47.2 l 93,-25.8"
+     id="path12" />
+  <metadata
+     id="metadata835">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>HTML5 Logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
