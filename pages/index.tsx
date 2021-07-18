@@ -2,7 +2,7 @@ import React from "react"
 import { FireFilled, LikeFilled, MailFilled } from "@ant-design/icons"
 import PageLayout from "../layouts/PageLayout"
 import AboutMe from "../components/logo/AboutMe"
-import ContactForm from "../components/logo/ContactForm"
+import Contact from "../components/logo/Contact"
 import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
@@ -52,8 +52,8 @@ const IndexPage: React.FC = () => {
         </div>
         <AboutMe />
         <WhatICanDo />
-        <ContactForm />
         <Works />
+        <Contact />
       </div>
     </PageLayout>
   )
