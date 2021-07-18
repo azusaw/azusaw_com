@@ -8,6 +8,7 @@ import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
 import spaceStyle from "../styles/space.module.css"
 import WhatICanDo from "../components/logo/WhatICanDo"
+import Works from "../components/logo/Works"
 
 const IndexPage: React.FC = () => {
   return (
@@ -52,6 +53,7 @@ const IndexPage: React.FC = () => {
         <AboutMe />
         <WhatICanDo />
         <ContactForm />
+        <Works />
       </div>
     </PageLayout>
   )
