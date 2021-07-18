@@ -1,10 +1,6 @@
 import React from "react"
-import { motion, useAnimation } from "framer-motion"
-import { Avatar, Button, Col, Form, Image, Input, message, Row } from "antd"
-import { useForm } from "antd/lib/form/Form"
-import colorStyle from "../../styles/color.module.css"
+import { Avatar, Col, Row } from "antd"
 import commonStyle from "../../styles/common.module.css"
-import sizeStyle from "../../styles/size.module.css"
 import spaceStyle from "../../styles/space.module.css"
 
 const AboutMe: React.FC = () => {
@@ -26,7 +22,6 @@ const AboutMe: React.FC = () => {
           sm={{ span: 24 }}
           className={spaceStyle.alignCenter}
         >
-          {/*TODO: make portrait*/}
           <Avatar size={100} src="/images/Tinny.jpg" />
         </Col>
         <Col span={24}>
