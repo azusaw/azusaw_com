@@ -45,9 +45,15 @@ export default function PageLayout({ title, children }) {
             </span>
             {!isMobile && (
               <span className={spaceStyle.floatRight}>
-                <GithubFilled className={commonStyle.iconButton} />
-                <LinkedinFilled className={commonStyle.iconButton} />
-                <InstagramFilled className={commonStyle.iconButton} />
+                <a target="_blank" href={"https://github.com/azusaw/"}>
+                  <GithubFilled className={commonStyle.iconButton} />
+                </a>
+                <a target="_blank" href={"https://www.linkedin.com/in/azusaw/"}>
+                  <LinkedinFilled className={commonStyle.iconButton} />
+                </a>
+                <a target="_blank" href={"https://www.instagram.com/azusaw_/"}>
+                  <InstagramFilled className={commonStyle.iconButton} />
+                </a>
                 <MailFilled className={commonStyle.iconButton} />
               </span>
             )}
