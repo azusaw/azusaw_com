@@ -1,14 +1,16 @@
 # azusaw_work
 My portfolio site 🙃
 
-# website
-> https://azusaw.work
+## website
+https://azusaw.work
 
-# used
+## libraries and frameworks
 - Next.js
 - Vercel
+- framer-motion
+- ant-design
 
-# build setup
+## build setup
 ```
 # install dependencies
 $ npm install
