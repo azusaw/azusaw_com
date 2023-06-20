@@ -1,7 +1,7 @@
 import React from "react"
 import { Avatar, Col, Row } from "antd"
-import commonStyle from "../../styles/common.module.css"
-import spaceStyle from "../../styles/space.module.css"
+import commonStyle from "styles/common.module.css"
+import spaceStyle from "styles/space.module.css"
 
 const AboutMe: React.FC = () => {
   return (

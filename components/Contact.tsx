@@ -3,10 +3,10 @@ import { motion, useAnimation } from "framer-motion"
 import { Button, Form, Image, Input, message } from "antd"
 import { HeartFilled } from "@ant-design/icons"
 import { useForm } from "antd/lib/form/Form"
-import colorStyle from "../../styles/color.module.css"
-import commonStyle from "../../styles/common.module.css"
-import sizeStyle from "../../styles/size.module.css"
-import spaceStyle from "../../styles/space.module.css"
+import colorStyle from "styles/color.module.css"
+import commonStyle from "styles/common.module.css"
+import sizeStyle from "styles/size.module.css"
+import spaceStyle from "styles/space.module.css"
 
 const layout = {
   labelCol: { span: 5 },
@@ -39,30 +39,46 @@ const Contact: React.FC = () => {
 
   const sendGoogleForm = (values: any) => {
     let formData = new URLSearchParams()
+    const googleFormAction =
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfuqYA1f9_sNHYNG09ql1WuayvkuEOhTii7nt3fpB5jR0Oa2g/formResponse"
+
     formData.append("entry.1388202581", values.email)
     formData.append("entry.567215944", values.name)
     formData.append("entry.2042146725", values.message)
 
-    message.success({
-      icon: <></>,
-      content: (
-        <>
-          <div
-            className={`${commonStyle.bold} ${sizeStyle.fontXLarge} ${spaceStyle.py05}`}
-          >
-            {"Thank you"}
-            <HeartFilled style={{ paddingLeft: "10px", color: "#ff8dbc" }} />
-          </div>
-          <div className={`${spaceStyle.py10}`}>
-            {"I checking the message and contact you soon."}
-            <br />
-            {"Having a nice day!"}
-          </div>
-        </>
-      ),
-      style: { marginTop: "30vh" },
-      duration: 5,
+    fetch(googleFormAction, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData,
     })
+      .then(() =>
+        message.success({
+          icon: <></>,
+          content: (
+            <>
+              <div
+                className={`${commonStyle.bold} ${sizeStyle.fontXLarge} ${spaceStyle.py05}`}
+              >
+                {"Thank you"}
+                <HeartFilled
+                  style={{ paddingLeft: "10px", color: "#ff8dbc" }}
+                />
+              </div>
+              <div className={`${spaceStyle.py10}`}>
+                {"I checking the message and contact you soon."}
+                <br />
+                {"Having a nice day!"}
+              </div>
+            </>
+          ),
+          style: { marginTop: "30vh" },
+          duration: 5,
+        })
+      )
+      .catch(() => {
+        console.log("error")
+      })
   }
 
   return (
@@ -109,7 +125,6 @@ const Contact: React.FC = () => {
         >
           <Input />
         </Form.Item>
-
         <Form.Item
           name="message"
           label={<span className={colorStyle.white}>{"Messages"}</span>}

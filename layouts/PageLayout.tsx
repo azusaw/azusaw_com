@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import SiteLogo from "../components/logo/SiteLogo"
-import MouseFollowEffect from "../components/logo/MouseFollowEffect"
+import MouseFollowEffect from "../components/mouse-effect/MouseFollowEffect"
 import {
   GithubFilled,
   InstagramFilled,
