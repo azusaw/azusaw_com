@@ -1,14 +1,14 @@
 import React from "react"
 import { FireFilled, LikeFilled, MailFilled } from "@ant-design/icons"
 import PageLayout from "../layouts/PageLayout"
-import AboutMe from "../components/logo/AboutMe"
-import Contact from "../components/logo/Contact"
+import AboutMe from "../components/AboutMe"
+import Contact from "../components/Contact"
+import WhatICanDo from "../components/WhatICanDo"
+import Works from "../components/Works"
 import colorStyle from "../styles/color.module.css"
 import commonStyle from "../styles/common.module.css"
 import sizeStyle from "../styles/size.module.css"
 import spaceStyle from "../styles/space.module.css"
-import WhatICanDo from "../components/logo/WhatICanDo"
-import Works from "../components/logo/Works"
 
 const IndexPage: React.FC = () => {
   return (
