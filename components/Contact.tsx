@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className={commonStyle.box}>
+    <section className={commonStyle.box} id={"contact"}>
       <h2
         className={commonStyle.head}
         style={{ display: "inline-block", position: "relative", top: 0 }}
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
           </Button>
         </Form.Item>
       </Form>
-    </div>
+    </section>
   )
 }
 export default Contact

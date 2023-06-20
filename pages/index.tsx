@@ -40,14 +40,14 @@ const IndexPage: React.FC = () => {
             </span>
             <br />
             {"Want to work together?  -> "}
-            <span className={commonStyle.bold}>
+            <a className={commonStyle.bold} href={"#contact"}>
               <span className={commonStyle.underLineToRight}>
                 {"Send me a message."}
                 <MailFilled
                   className={`${spaceStyle.pl05} ${commonStyle.mailIcon}`}
                 />
               </span>
-            </span>
+            </a>
           </div>
         </div>
         <AboutMe />

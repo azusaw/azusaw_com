@@ -54,7 +54,9 @@ export default function PageLayout({ title, children }) {
                 <a target="_blank" href={"https://www.instagram.com/azusaw_/"}>
                   <InstagramFilled className={commonStyle.iconButton} />
                 </a>
-                <MailFilled className={commonStyle.iconButton} />
+                <a href="#contact">
+                  <MailFilled className={commonStyle.iconButton} />
+                </a>
               </span>
             )}
           </div>
