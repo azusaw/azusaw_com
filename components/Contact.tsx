@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { Button, Form, Image, Input, message } from "antd"
 import { HeartFilled } from "@ant-design/icons"
@@ -19,6 +19,7 @@ const tailLayout = {
 const Contact: React.FC = () => {
   const [form] = useForm()
   const controls = useAnimation()
+  const [isFormValid, setIsFormValid] = useState(false)
 
   const mailSendAnimationStart = () => {
     controls.start({
@@ -37,6 +38,17 @@ const Contact: React.FC = () => {
     })
   }
 
+  const validateForm = () => {
+    let values = form.getFieldsValue()
+    let errors = form
+      .getFieldsError()
+      .map((item) => item.errors[0])
+      .filter((err) => err)
+    setIsFormValid(
+      !!values.email && !!values.name && !!values.message && errors.length == 0
+    )
+  }
+
   const sendGoogleForm = (values: any) => {
     let formData = new URLSearchParams()
     const googleFormAction =
@@ -52,7 +64,7 @@ const Contact: React.FC = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: formData,
     })
-      .then(() =>
+      .then(() => {
         message.success({
           icon: <></>,
           content: (
@@ -75,9 +87,27 @@ const Contact: React.FC = () => {
           style: { marginTop: "30vh" },
           duration: 5,
         })
-      )
+        form.resetFields()
+      })
       .catch(() => {
-        console.log("error")
+        message.error({
+          content: (
+            <>
+              <div
+                className={`${commonStyle.bold} ${sizeStyle.fontXLarge} ${spaceStyle.py05}`}
+              >
+                {"Error..."}
+              </div>
+              <div className={`${spaceStyle.py10}`}>
+                {"Sorry, something was wrong."}
+                <br />
+                {"Failed to send a message."}
+              </div>
+            </>
+          ),
+          style: { marginTop: "30vh" },
+          duration: 3,
+        })
       })
   }
 
@@ -102,6 +132,7 @@ const Contact: React.FC = () => {
         {...layout}
         form={form}
         colon={false}
+        onValuesChange={validateForm}
         onFinish={sendGoogleForm}
         className={spaceStyle.mt10}
       >
@@ -133,7 +164,12 @@ const Contact: React.FC = () => {
           <Input.TextArea rows={5} />
         </Form.Item>
         <Form.Item {...tailLayout}>
-          <Button htmlType="submit" block className={commonStyle.submitButton}>
+          <Button
+            htmlType="submit"
+            block
+            className={commonStyle.submitButton}
+            disabled={!isFormValid}
+          >
             {"Submit"}
           </Button>
         </Form.Item>

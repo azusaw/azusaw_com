@@ -10,7 +10,7 @@
 .pointer:hover {
   cursor: pointer;
 }
-.submitButton, .submitButton:hover, .submitButton:focus, .submitButton:visited {
+.submitButton, .submitButton:disabled, .submitButton:hover, .submitButton:focus, .submitButton:visited {
   margin-top: 1rem;
   font-weight: bold;
   color: #fff;
@@ -18,9 +18,15 @@
   background: transparent;
   transition: all .3s ease-in-out;
 }
-.submitButton:hover {
-  border-radius: 15px;
+.submitButton {
   box-shadow: 0 0 10px 3px #fff;
+}
+.submitButton:disabled {
+  box-shadow: none;
+}
+.submitButton:hover {
+  background: grey;
+  box-shadow: 0 0 15px 5px #fff;
 }
 .backGroundFade {
   position: relative;
