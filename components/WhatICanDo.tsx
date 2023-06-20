@@ -21,17 +21,15 @@ const WhatICanDo: React.FC = () => {
   return (
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"WHAT I CAN DO"}</h2>
-      <div className={commonStyle.logoBox}>
-        {items.map((item) => (
-          <Avatar
-            key={item.alt}
-            size={50}
-            src={item.src}
-            alt={item.alt}
-            className={`${spaceStyle.mx05} ${commonStyle.techLogo}`}
-          />
-        ))}
-      </div>
+      {items.map((item) => (
+        <Avatar
+          key={item.alt}
+          size={50}
+          src={item.src}
+          alt={item.alt}
+          className={`${spaceStyle.mx05} ${commonStyle.techLogo} `}
+        />
+      ))}
     </div>
   )
 }

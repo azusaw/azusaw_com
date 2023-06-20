@@ -138,8 +138,20 @@
   box-shadow: 0 0 20px 0 #ddd;
   transition: .5s;
 }
-.logoBox:hover .techLogo {
+.techLogo {
+  color: white;
+  border-radius: 10px;
+  padding: 3px;
+  margin-left: 2rem;
+  transition: .5s ;
+}
+
+.techLogo:hover {
   animation: poyoyon 1.2s ease-in-out infinite forwards;
+  color: #666;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #fff;
+  transition: .5s ;
 }
 @keyframes poyoyon {
   0%  {
