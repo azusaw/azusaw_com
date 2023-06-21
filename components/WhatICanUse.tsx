@@ -4,7 +4,7 @@ import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
 import { techstacks } from "techstacks"
 
-const WhatICanDo: React.FC = () => {
+const WhatICanUse: React.FC = () => {
   const popContent = (item) => (
     <div className={commonStyle.popover}>
       <Row>
@@ -23,7 +23,7 @@ const WhatICanDo: React.FC = () => {
 
   return (
     <div className={commonStyle.container}>
-      <h2 className={commonStyle.head}>{"WHAT I CAN DO"}</h2>
+      <h2 className={commonStyle.head}>{"WHAT I CAN USE"}</h2>
       {techstacks.map((item) => (
         <Popover content={popContent(item)} placement={item.placement}>
           <Avatar
@@ -38,4 +38,4 @@ const WhatICanDo: React.FC = () => {
     </div>
   )
 }
-export default WhatICanDo
+export default WhatICanUse
