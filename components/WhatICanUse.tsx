@@ -2,7 +2,7 @@ import React from "react"
 import { Avatar, Col, Popover, Row, Statistic } from "antd"
 import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
-import { techstacks } from "techstacks"
+import { techstacks } from "data/techstacks"
 
 const WhatICanUse: React.FC = () => {
   const popContent = (item) => (

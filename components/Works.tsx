@@ -1,27 +1,31 @@
 import React, { useEffect } from "react"
 import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
-import { Card, Col, Row } from "antd"
+import { Col, Row } from "antd"
 import { gsap } from "gsap"
+import { works } from "data/works"
 
-const works = [1, 2, 3, 4, 5, 6]
-
-const WorkCard = (props: { idx: number }) => (
-  <Card
-    id={`card-${props.idx}`}
-    hoverable
-    style={{ width: 240 }}
-    cover={
-      <img
-        alt="example"
-        src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-        height={200}
-      />
-    }
-  >
-    {"Europe Street beat"}
-    {"www.instagram.com"}
-  </Card>
+const WorkCard = (props: {
+  idx: number
+  work: {
+    img: string
+    title: string
+    url: string
+  }
+}) => (
+  <div id={`card-${props.idx}`} className={spaceStyle.pb10}>
+    <img
+      alt="example"
+      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+      width={"100%"}
+      height={"250px"}
+    />
+    <div className={spaceStyle.pa10}>
+      {props.work.title}
+      <br />
+      {props.work.url}
+    </div>
+  </div>
 )
 
 const Works: React.FC = () => {
@@ -36,8 +40,8 @@ const Works: React.FC = () => {
       <h2 className={commonStyle.head}>{"WORKS"}</h2>
       <Row>
         {works.map((work, idx) => (
-          <Col span={8} className={spaceStyle.mt15}>
-            <WorkCard idx={idx} />
+          <Col span={8}>
+            <WorkCard idx={idx} work={work} />
           </Col>
         ))}
       </Row>
