@@ -1,34 +1,39 @@
 import React from "react"
-import { Avatar } from "antd"
+import { Avatar, Col, Popover, Row, Statistic } from "antd"
 import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
+import { techstacks } from "techstacks"
 
 const WhatICanDo: React.FC = () => {
-  const items = [
-    { src: "/icons/react.svg", alt: "React.js" },
-    { src: "/icons/nextjs.svg", alt: "Next.js" },
-    { src: "/icons/gatsbyjs.svg", alt: "Gatsby.js" },
-    { src: "/icons/vue.svg", alt: "Vue.js" },
-    { src: "/icons/nuxtjs.svg", alt: "Nuxt.js" },
-    { src: "/icons/typescript.svg", alt: "typescript" },
-    { src: "/icons/html5_white.svg", alt: "html5" },
-    { src: "/icons/css3_white.svg", alt: "css3" },
-    { src: "/icons/aws_white.svg", alt: "AWS" },
-    { src: "/icons/python.svg", alt: "Python" },
-    { src: "/icons/flutter.svg", alt: "Flutter" },
-    { src: "/icons/java.svg", alt: "Java" },
-  ]
+  const popContent = (item) => (
+    <div className={commonStyle.popover}>
+      <Row>
+        <Col span={12}>
+          <Statistic title="Level" value={item.level} />
+        </Col>
+        <Col span={12}>
+          <Statistic title="Year of experience" value={item.year} />
+        </Col>
+        <Col span={24} className={spaceStyle.mt10}>
+          {item.comment}
+        </Col>
+      </Row>
+    </div>
+  )
+
   return (
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"WHAT I CAN DO"}</h2>
-      {items.map((item) => (
-        <Avatar
-          key={item.alt}
-          size={50}
-          src={item.src}
-          alt={item.alt}
-          className={`${spaceStyle.mx05} ${commonStyle.techLogo} `}
-        />
+      {techstacks.map((item) => (
+        <Popover content={popContent(item)} placement={item.placement}>
+          <Avatar
+            key={item.alt}
+            size={50}
+            src={item.src}
+            alt={item.alt}
+            className={`${spaceStyle.mx05} ${commonStyle.techLogo} `}
+          />
+        </Popover>
       ))}
     </div>
   )
