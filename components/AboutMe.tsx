@@ -7,8 +7,8 @@ const AboutMe: React.FC = () => {
   return (
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"ABOUT ME"}</h2>
-      <Row>
-        <Col md={{ span: 18 }} sm={{ span: 24 }}>
+      <Row gutter={[16, 24]}>
+        <Col xs={{ span: 24 }} md={{ span: 16 }}>
           {"It's azsaw. I was born in 1993. "}
           {
             "Currently I'm working as a front-end engineer but my career was started from back-end engineer. "
@@ -18,16 +18,11 @@ const AboutMe: React.FC = () => {
           }
         </Col>
         <Col
-          md={{ offset: 1, span: 5 }}
-          sm={{ span: 24 }}
-          className={spaceStyle.alignCenter}
+          xs={{ span: 24 }}
+          md={{ span: 6 }}
+          className={`${spaceStyle.alignRight} ${spaceStyle.mr15}`}
         >
           <Avatar size={100} src="/images/Tinny.jpg" />
-        </Col>
-        <Col span={24}>
-          <div className={commonStyle.backGroundFade}>
-            {"Want to know me more?"}
-          </div>
         </Col>
       </Row>
     </div>

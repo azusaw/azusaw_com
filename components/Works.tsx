@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
+import sizeStyle from "styles/size.module.css"
 import { Col, Row } from "antd"
 import { gsap } from "gsap"
 import { works } from "data/works"
@@ -23,7 +24,7 @@ const WorkCard = (props: {
     <div className={spaceStyle.pa10}>
       {props.work.title}
       <br />
-      {props.work.url}
+      <span className={sizeStyle.fontXSmall}>{props.work.url}</span>
     </div>
   </div>
 )
@@ -38,9 +39,9 @@ const Works: React.FC = () => {
   return (
     <div className={commonStyle.container}>
       <h2 className={commonStyle.head}>{"WORKS"}</h2>
-      <Row>
+      <Row gutter={[16, 16]}>
         {works.map((work, idx) => (
-          <Col span={8}>
+          <Col xs={{ span: 24 }} md={{ span: 8 }}>
             <WorkCard idx={idx} work={work} />
           </Col>
         ))}

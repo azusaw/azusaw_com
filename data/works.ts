@@ -25,12 +25,12 @@ export const works: {
   {
     img: "images/works/cocorese.jpg",
     title: "Reservation management app",
-    url: "",
+    url: "*private",
     description: "hoge",
   },
   {
     img: "images/works/cocorese2.jpg",
-    title: "Reservation app",
+    title: "Reservation website",
     url: "https://cocorese.idea-clinic.jp/",
     description: "hoge",
   },

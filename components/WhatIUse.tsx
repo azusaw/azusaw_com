@@ -4,14 +4,14 @@ import commonStyle from "styles/common.module.css"
 import spaceStyle from "styles/space.module.css"
 import { techstacks } from "data/techstacks"
 
-const WhatICanUse: React.FC = () => {
+const WhatIUse: React.FC = () => {
   const popContent = (item) => (
     <div className={commonStyle.popover}>
       <Row>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Statistic title="Level" value={item.level} />
         </Col>
-        <Col span={12}>
+        <Col xs={{ span: 24 }} md={{ span: 12 }}>
           <Statistic title="Year of experience" value={item.year} />
         </Col>
         <Col span={24} className={spaceStyle.mt10}>
@@ -23,12 +23,12 @@ const WhatICanUse: React.FC = () => {
 
   return (
     <div className={commonStyle.container}>
-      <h2 className={commonStyle.head}>{"WHAT I CAN USE"}</h2>
+      <h2 className={commonStyle.head}>{"WHAT I USE"}</h2>
       {techstacks.map((item) => (
         <Popover content={popContent(item)} placement={item.placement}>
           <Avatar
             key={item.alt}
-            size={50}
+            size={60}
             src={item.src}
             alt={item.alt}
             className={`${spaceStyle.mx05} ${commonStyle.techLogo} `}
@@ -38,4 +38,4 @@ const WhatICanUse: React.FC = () => {
     </div>
   )
 }
-export default WhatICanUse
+export default WhatIUse
