@@ -15,10 +15,10 @@ const WorkCard = (props: {
 }) => (
   <div id={`card-${props.idx}`} className={spaceStyle.pb10}>
     <img
-      alt="example"
-      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+      alt={props.work.img}
+      src={props.work.img}
       width={"100%"}
-      height={"250px"}
+      height={"220px"}
     />
     <div className={spaceStyle.pa10}>
       {props.work.title}
